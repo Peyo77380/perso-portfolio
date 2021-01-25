@@ -23,27 +23,31 @@ function hideMenu(){
 
 function displayRequestedPage () {
 
+    console.log(window.pageYOffset);
     let href = this.href;
     let requestPage = href.split('#')[1];   
     let pages = Object.values(document.querySelectorAll('section'));
-
     
+    let existingPage = false;
 
-    pages.map(page => {
+    for (let page of pages) {
+     
         page.classList.add('hidden');
-
+        
         if (page.id === requestPage){
             page.classList.remove('hidden');
+            existingPage = true;
         }
-    })
+    }
 
-    if (!pages.some(e => e.id === requestPage)){
-        console.log('nein');
+    window.scrollTo(0,0);
+    if (!existingPage){
+        alert('la page nexiste pas');
     } 
 
 }
 
-function setMobileEventListeners () {
+function setEventListeners () {
     let menuLinks = document.querySelectorAll('nav ul a');
 
     if (window.innerWidth < 688 || screen.width < 688) {
@@ -65,7 +69,7 @@ function setMobileEventListeners () {
 function init() {
     
     
-    setMobileEventListeners();
+    setEventListeners();
         
     
     
@@ -78,4 +82,10 @@ function init() {
 
 
 document.addEventListener('DOMContentLoaded', init);
-window.addEventListener('resize', setMobileEventListeners);
+window.addEventListener('resize', setEventListeners);
+
+function urlHandler () {
+    console.log(window.location.href)
+}
+
+urlHandler();
