@@ -21,15 +21,41 @@ function hideMenu(){
     header.classList.remove('active');
 }
 
-function displayRequestedPage () {
+function transitionAnimation () {
+    let main = document.querySelector('main');
+    let transitionContainer = document.querySelector('.jsTrans');
+    
+    main.classList.add('hidden');
+    
+    let transitionDivs = [];
+    for (let i = 0; i<6; i++){
+        transitionDivs.push(document.createElement('div'));
+        if(i%2 === 0){
+            transitionDivs[i].style.backgroundColor= "red";
+        }
 
-    console.log(window.pageYOffset);
+        transitionDivs[i].style.animationDelay = `${i*.25}s`;
+        transitionDivs[i].style.animationDuration = `${0.8+i/6}s`;
+        transitionContainer.appendChild(transitionDivs[i]);
+    }
+    transitionContainer.classList.add('full');
+
+    setTimeout(() => {    
+        main.classList.remove('hidden');        
+        transitionContainer.innerHTML = '';
+        transitionContainer.classList.remove('full');
+    }, 2883);
+
+    
+
+}
+function displayRequestedPage () {
     let href = this.href;
     let requestPage = href.split('#')[1];   
     let pages = Object.values(document.querySelectorAll('section'));
     
     let existingPage = false;
-
+    transitionAnimation();
     for (let page of pages) {
      
         page.classList.add('hidden');
@@ -41,6 +67,8 @@ function displayRequestedPage () {
     }
 
     window.scrollTo(0,0);
+    
+    
     if (!existingPage){
         alert('la page nexiste pas');
     } 
@@ -72,7 +100,10 @@ function init() {
     setEventListeners();
         
     
-    
+    let intro = document.querySelector('.intro');
+    if (intro.classList.contains('hidden')){
+       intro.classList.remove('hidden');
+    }
 
     setTimeout(displayIntro ,1000);
 
@@ -84,8 +115,3 @@ function init() {
 document.addEventListener('DOMContentLoaded', init);
 window.addEventListener('resize', setEventListeners);
 
-function urlHandler () {
-    console.log(window.location.href)
-}
-
-urlHandler();

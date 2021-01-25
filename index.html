@@ -22,6 +22,7 @@
                 <li><a href="#intro"><i class="fa fa-home"></i>Accueil</a></li>
                 <li><a href="#about"><i class="fa fa-address-card"></i>À propos</a></li>
                 <li><a href="#portfolio"><i class="fas fa-pager"></i>Portfolio</a></li>
+                <li><a href="#skills"><i class="fas fa-cogs"></i>Compétences</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
             </ul>
         </nav>
@@ -47,8 +48,8 @@
 
                 <div class="socialMediaLinks">
                     <a href="mailto:contact@pierreguichard.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/pierre-guichard-00741892/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Peyo77380"><i class="fab fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/pierre-guichard-00741892/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Peyo77380" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"></i></a>
                 </div>
             </div>
                    
@@ -75,7 +76,7 @@
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio">
+        <section id="portfolio" class="portfolio hidden">
             <div class="wrapper">
                 <h3>Portfolio</h3>
                 <p>Vous trouverez ici quelques un de mes précédents projets.</p>
@@ -163,18 +164,113 @@
             </div>
         </section>
 
+        <section id="skills" class="skills hidden">
+            <div class="wrapper">
+                <article>
+                    <h3>Front-end</h3>
+                    <p>Développement de sites dynamiques en prenant des outils adaptés, correspondant aux normes de la W3C et responsives.</p>
+                    <div class="techno tab">
+                        <input type="checkbox" id="front-techno">
+                        <label for="front-techno" class="accordionLabel">
+                            Mes technos
+                        </label>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>SCSS</li>
+                            <li>Javascript ES6</li>
+                            <li>jQuery</li>
+                            <li>Bootstrap</li>
+                            <li>Twig</li>
+                            <li>Wordpress</li>
+                        </ul>
+                    </div>
+                    <div class="tools tab">
+                        <input type="checkbox" id="front-tools">
+                        <label for="front-tools" class="accordionLabel">
+                            Mes outils
+                        </label>
+                        <ul>
+                            <li>Responsive</li>
+                            <li>Mobile first</li>
+                            <li>Ajax</li>
+                            <li>Manipulation du DOM</li>
+                            <li>Canvas</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Back-end</h3>
+                    <p>Traitement de données, API REST et gestion de bases de données</p>
+                    <div class="techno tab">
+                        <input type="checkbox" id="back-techno">
+                        <label for="back-techno" class="accordionLabel">
+                            Mes technos
+                        </label>
+                        <ul>
+                            <li>PHP 7</li>
+                            <li>SQL</li>
+                            <li>Symfony 5</li>
+                        </ul>
+                    </div>
+                    <div class="tools tab">
+                        <input type="checkbox" id="back-tools">
+                        <label for="back-tools" class="accordionLabel">
+                            Mes outils
+                        </label>
+                        <ul>
+                            <li>phpMyAdmin</li>
+                            <li>MariaDB</li>
+                            <li>MySQL</li>
+                            <li>POO</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Environnement de travail</h3>                   
+                    <div class="tools">
+                        <ul>
+                            <li>Editeurs: Visual Studio Code, PHPStorm</li>
+                            <li>Systèmes d'exploitation: Windows, OS X, Ubuntu, Mint</li>
+                            <li>Configuration serveur: Apache, MAMP</li>
+                            <li>VCS: Git, GitHub</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Langues étrangères</h3>
+                    <div class="tools">
+                        <ul>
+                            <li>Anglais: courant</li>
+                            <li>Allemand: débutant</li>
+                            <li>Italien: débutant</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Et la suite?</h3>
+                    <p>Je suis actuellement en train de me former par moi même. Mes dernières cibles: Symfony et React !</p>
+                </article>
+
+            </div>
+        </section>
+
         <section id="contact" class="contact hidden">
             <div class="wrapper">
                 <h3>Je suis joignable !</h3>
                 <p>Pour rentrer en contact, écrivez moi un email ou retrouvez-moi sur les réseaux sociaux.</p>
                 <div class="socialMediaLinks">
                     <a href="mailto:contact@pierreguichard.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/pierre-guichard-00741892/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Peyo77380"><i class="fab fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/pierre-guichard-00741892/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Peyo77380" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"></i></a>
                 </div>
             </div>
         </section>
     </main>
-
+    <div class="jsTrans"></div>
 </body>
 </html>
