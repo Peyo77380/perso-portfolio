@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pierre Guichard - Développeur Intégrateur Web Strasbourg</title>
+    <meta name="description" content="Pierre Guichard est développeur intégrateur web freelance, situé à Strasbourg. Il sera capable de vous aider à acquérir une présence numérique et vous aider dans vos projets de sites web, blog,...">
     <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
     
@@ -30,7 +31,7 @@
     </header>
     
     <main>
-        <section id="intro" class="intro closed hidden">
+        <section id="intro" class="intro closed noDisplay">
             <div class="wrapper">
                 
                 <div class="intro_pic">
@@ -56,9 +57,9 @@
         </section>
 
 
-        <section id="about" class="about hidden">
+        <section id="about" class="about noDisplay">
             <div class="wrapper">
-                <h3>Je suis Pierre, développeur Fullstack, basé à Strasbourg.</h3>
+                <h2>Je suis Pierre Guichard, développeur Fullstack, basé à Strasbourg.</h2>
                 <p>
                     Passionné par tout ce qui touche à l'informatique depuis mon enfance et curieux, j'ai décidé de me reconvertir professionnellement, 
                     après une première vie de comptable, et de devenir <strong>développeur</strong>.
@@ -76,9 +77,9 @@
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio hidden">
+        <section id="portfolio" class="portfolio noDisplay">
             <div class="wrapper">
-                <h3>Portfolio</h3>
+                <h2>Portfolio</h2>
                 <p>Vous trouverez ici quelques un de mes précédents projets.</p>
 
                 <div class="projectsMenu">
@@ -88,7 +89,7 @@
                 </div>
                 
                 <article id="lasciatemiParlare" class="project">
-                    <h4>Lasciatemi Parlare</h4>
+                    <h3>Lasciatemi Parlare</h3>
                     <p>Projet de fin de formation, proposant des exercices pour apprendre l'italien. Réalisé en suivant les règles du MVC, en POO.</p>
                     <div class="screenshots">
                         <img src="./img/project_lasctemiParlare1.png" alt="Preview de l'accueil du site Lasciatemi Parlare">
@@ -96,7 +97,7 @@
     
                     </div>
                     <div class="techno">
-                        <h6>Environnement</h6>
+                        <h4>Technos utilisées</h4>
                         <div class="tags">
                             <div class="tag">PHP</div>
                             <div class="tag">JS</div>
@@ -117,21 +118,24 @@
                 </article>
            
                 <article id="larr-abesk" class="project">
-                    <h4>Larr-abesk</h4>
+                    <h3>Larr-abesk</h3>
                     <p>Réalisation d'un thème Wordpress sur mesure pour Larr-abesk, blog de méditation et de relaxation. Réalisation d'un plugin personnalisable permettant l'affichage des derniers articles postés de façon dynamique.</p>
                     <div class="screenshots">
-                        <img src="./img/project_ Larr-abesk.png" alt="Preview du site Larr-abesk">
+                        <img src="./img/project_Larr-abesk.png" alt="Preview du site Larr-abesk">
 
                     </div>
-
-                    <div class="tags">
-                        <div class="tag">PHP</div>
-                        <div class="tag">JS</div>
-                        <div class="tag">HTML</div>
-                        <div class="tag">CSS</div>
-                        <div class="tag">Wordpress</div>
-                        <div class="tag">Responsive</div>
+                    <div class="techno">
+                        <h4>Technos utilisées</h4>
+                        <div class="tags">
+                            <div class="tag">PHP</div>
+                            <div class="tag">JS</div>
+                            <div class="tag">HTML</div>
+                            <div class="tag">CSS</div>
+                            <div class="tag">Wordpress</div>
+                            <div class="tag">Responsive</div>
+                        </div>
                     </div>
+                    
                     <div class="links">
                         <a href="http://larr-abesk.fr" target="_blank" rel="noopener noreferrer">Vers le site <i class="fa fa-arrow-right"></i></a>
 
@@ -145,13 +149,16 @@
                         <img src="./img/project_enviesDAilleurs.png" alt="Preview du blog Envies d'ailleurs">
 
                     </div>
-                    <div class="tags">
-                        <div class="tag">PHP</div>
-                        <div class="tag">JS</div>
-                        <div class="tag">HTML</div>
-                        <div class="tag">CSS</div>
-                        <div class="tag">MySQL</div>
-                        <div class="tag">CRUD</div>
+                    <div class="techno">
+                        <h4>Technos utilisées</h4>
+                        <div class="tags">
+                            <div class="tag">PHP</div>
+                            <div class="tag">JS</div>
+                            <div class="tag">HTML</div>
+                            <div class="tag">CSS</div>
+                            <div class="tag">MySQL</div>
+                            <div class="tag">CRUD</div>
+                        </div>
                     </div>
                     <div class="links">
                         <a href="https://www.envies-dailleurs.pierreguichard.com/" target="_blank" rel="noopener noreferrer">Vers le site <i class="fa fa-arrow-right"></i></a>
@@ -164,10 +171,10 @@
             </div>
         </section>
 
-        <section id="skills" class="skills hidden">
+        <section id="skills" class="skills noDisplay">
             <div class="wrapper">
                 <article>
-                    <h3>Front-end</h3>
+                    <h2>Front-end</h2>
                     <p>Développement de sites dynamiques en prenant des outils adaptés, correspondant aux normes de la W3C et responsives.</p>
                     <div class="techno tab">
                         <input type="checkbox" id="front-techno">
@@ -201,7 +208,7 @@
                 </article>
 
                 <article>
-                    <h3>Back-end</h3>
+                    <h2>Back-end</h2>
                     <p>Traitement de données, API REST et gestion de bases de données</p>
                     <div class="techno tab">
                         <input type="checkbox" id="back-techno">
@@ -229,7 +236,7 @@
                 </article>
 
                 <article>
-                    <h3>Environnement de travail</h3>                   
+                    <h2>Environnement de travail</h2>                   
                     <div class="tools">
                         <ul>
                             <li>Editeurs: Visual Studio Code, PHPStorm</li>
@@ -241,7 +248,7 @@
                 </article>
 
                 <article>
-                    <h3>Langues étrangères</h3>
+                    <h2>Langues étrangères</h2>
                     <div class="tools">
                         <ul>
                             <li>Anglais: courant</li>
@@ -252,16 +259,16 @@
                 </article>
 
                 <article>
-                    <h3>Et la suite?</h3>
+                    <h2>Et la suite?</h2>
                     <p>Je suis actuellement en train de me former par moi même. Mes dernières cibles: Symfony et React !</p>
                 </article>
 
             </div>
         </section>
 
-        <section id="contact" class="contact hidden">
+        <section id="contact" class="contact noDisplay">
             <div class="wrapper">
-                <h3>Je suis joignable !</h3>
+                <h2>Je suis joignable !</h2>
                 <p>Pour rentrer en contact, écrivez moi un email ou retrouvez-moi sur les réseaux sociaux.</p>
                 <div class="socialMediaLinks">
                     <a href="mailto:contact@pierreguichard.com"><i class="fas fa-envelope"></i></a>
@@ -270,7 +277,69 @@
                 </div>
             </div>
         </section>
+
+        <section id="legal" class="legal noDisplay">
+            <div class="wrapper">
+                <article>
+                    <h2>Mentions légales</h2>
+                    <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l’économie
+                        numérique, il est précisé aux utilisateurs du site pierreguichard.com l’identité des différents
+                        intervenants dans le cadre de sa réalisation et de son suivi.</p>
+    
+                    <h3>Edition du site</h3>
+                    <p>Le site pierreguichard.com est édité par Pierre Guichard, micro entrepreneur, dont le siège social
+                        est situé 13 rue de Wasselonne, 67000 Strasbourg, immatriculé sous le numéro SIRET 883 698 508
+                        00016.</p>
+    
+    
+                    <h3>Hébergeur</h3>
+                    <p>Le site pierreguichard.com est hébergé par la société o2switch.</p>
+                    <p>Adresse : 222-224 Boulevard Gustave Flaubert - 63000 Clermont-Ferrand</p>
+    
+                    <h3>Nous contacter</h3>
+                    <p>Par email : support@pierreguichard.com</p>
+    
+                    <h3>Utilisation de vos données personnelles et protection de la vie privée</h3>
+                    <p>Pierre Guichard conservera dans ses systèmes informatiques et dans des conditions raisonnables de
+                        sécurité une preuve
+                        de la transaction comprenant le bon de commande et la facture.</p>
+                    <p>Les coordonnées transmises par le formulaire de contact serviront à vous répondre et ne seront en
+                        aucun cas transmises à un tiers.</p>
+                    <p>Conformément aux dispositions de la loi 78-17 du 6 janvier 1978 modifiée, l’utilisateur dispose d’un
+                        droit d’accès, de modification et de suppression des informations collectées par Pierre Guichard.
+                        Pour exercer ce droit, il reviendra à l’utilisateur d’envoyer un message à l’adresse suivante :
+                        support@pierreguichard.com</p>
+    
+                    <h3>Crédit illustrations</h3>
+                    <p>Les illustrations sont des utilisations libres de droit de <a href="https://storyset.com/work">Freepik
+                        Storyset</a>.</p>
+                </article>
+            </div>
+            
+        </section>
     </main>
     <div class="jsTrans"></div>
+
+
+    <footer>        
+        <div class="socialMediaLinks">
+            <a href="mailto:contact@pierreguichard.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/pierre-guichard-00741892/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Peyo77380" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"></i></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#intro">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#legal">Mentions légales</a></li>
+            </ul>
+        </nav>
+
+        <p>Pierre Guichard &copy; 2021</p>
+    </footer>
 </body>
 </html>

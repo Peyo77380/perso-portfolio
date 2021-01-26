@@ -11,69 +11,71 @@ function burgerButtonOnClick() {
     this.parentNode.classList.toggle('active');
 }
 
-function hideMenu(){
-    let header = document.querySelector('header.active');
-
-    if(!header) {
-        return;
-    }
-
+function hideMenu() {
+    let header = document.querySelector('header');
     header.classList.remove('active');
 }
 
-function transitionAnimation () {
-    let main = document.querySelector('main');
-    let transitionContainer = document.querySelector('.jsTrans');
-    
-    main.classList.add('hidden');
-    
-    let transitionDivs = [];
-    for (let i = 0; i<6; i++){
-        transitionDivs.push(document.createElement('div'));
-        if(i%2 === 0){
-            transitionDivs[i].style.backgroundColor= "red";
-        }
 
-        transitionDivs[i].style.animationDelay = `${i*.25}s`;
-        transitionDivs[i].style.animationDuration = `${0.8+i/6}s`;
-        transitionContainer.appendChild(transitionDivs[i]);
-    }
-    transitionContainer.classList.add('full');
+function displayRequestedPage(targetPage, pagesArray){
+    let targetId = targetPage.split('#')[1];
 
-    setTimeout(() => {    
-        main.classList.remove('hidden');        
-        transitionContainer.innerHTML = '';
-        transitionContainer.classList.remove('full');
-    }, 2883);
-
-    
-
-}
-function displayRequestedPage () {
-    let href = this.href;
-    let requestPage = href.split('#')[1];   
-    let pages = Object.values(document.querySelectorAll('section'));
-    
     let existingPage = false;
-    transitionAnimation();
-    for (let page of pages) {
-     
-        page.classList.add('hidden');
-        
-        if (page.id === requestPage){
-            page.classList.remove('hidden');
+
+    for(let page of pagesArray) {
+        if(page.id === targetId) {
             existingPage = true;
+            page.classList.remove('noDisplay');
+            setTimeout(() => page.classList.remove('hidden'), 500);
+
         }
     }
 
-    window.scrollTo(0,0);
+    if (!existingPage) {
+        window.location.href = "https://www.pierreguichard.com/404.html";
+    }
+}
+
+
+function hidePages(pagesArray) {
     
-    
-    if (!existingPage){
-        alert('la page nexiste pas');
-    } 
+
+    for (let page of pagesArray) {
+        page.classList.add('noDisplay');
+        page.classList.add('hidden');
+    }
+}
+
+function transitionLayer(){
+    let transitionContainer = document.querySelector('.jsTrans');
+
+    for(let i = 0; i<6; i++){
+        let transitionLayer = document.createElement('div');
+        transitionLayer.animationDelay = `${i*0.25}s`;
+        transitionContainer.appendChild(transitionLayer);
+    }
+
+    setTimeout(() => {
+        transitionContainer.innerHTML= "";
+
+    }, 6*250+0.75);
+     
 
 }
+
+function transitionAnimation () {
+    let targetPage = this.href;
+    let pagesArray = Object.values(document.querySelectorAll('section'));
+
+    hidePages(pagesArray);
+
+    transitionLayer();
+
+    displayRequestedPage(targetPage, pagesArray);
+
+
+}
+
 
 function setEventListeners () {
     let menuLinks = document.querySelectorAll('nav ul a');
@@ -90,19 +92,19 @@ function setEventListeners () {
 
     for(let link of menuLinks) {
 
-        link.addEventListener('click', displayRequestedPage);
+        link.addEventListener('click', transitionAnimation);
     }
 }
 
 function init() {
     
-    
+    window.scrollTo(0,0);
     setEventListeners();
-        
     
     let intro = document.querySelector('.intro');
-    if (intro.classList.contains('hidden')){
-       intro.classList.remove('hidden');
+    if (intro.classList.contains('hidden') || intro.classList.contains('noDisplay')){
+        intro.classList.remove('noDisplay');
+        intro.classList.remove('hidden');
     }
 
     setTimeout(displayIntro ,1000);
